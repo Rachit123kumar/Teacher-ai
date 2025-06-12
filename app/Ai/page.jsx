@@ -53,17 +53,17 @@ export default function Page() {
     <div className="min-h-screen bg-gradient-to-br from-black via-blue-950 to-black text-white p-4">
       {/* Header Section */}
       <div className="flex items-center justify-between mb-6 border border-blue-900 bg-blue-950/30 p-3 rounded-xl shadow-lg">
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-3 px-2">
           <input
-            className="bg-transparent text-xl border-b border-white focus:outline-none"
+            className="bg-transparent px-2 text-sm sm:text-xl border-b border-white focus:outline-none"
             value={formName}
             onChange={(e) => setFormName(e.target.value)}
           />
-          <span className="flex items-center gap-1 text-sm text-green-400">
+          <span className="flex items-center gap-1 text-xs text-green-400 md:text-sm">
             <MdOutlineCloudDone /> Saving...
           </span>
         </div>
-        <div className="flex items-center gap-3">
+        <div className=" items-center gap-3 hidden md:flex">
           <Button
             size="sm"
             variant="ghost"
