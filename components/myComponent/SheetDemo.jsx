@@ -13,6 +13,9 @@ export default function SheetDemo({ openTheme, setOpenTheme, replaceQuestions })
   const [loading,setLoading]=useState(false)
   const [numQuestion,setNumQuestion]=useState(0)
 
+
+
+
     async function handleGenerate() {
     setLoading(true)
     try {
@@ -29,14 +32,14 @@ Each question should be an object in a JSON array, with the following format:
       const response = await axios.post('/api/generateQuestion', {
         request: prompt
       })
-      console.log(typeof (response.data))
+      // console.log(typeof (response.data))
 
       const cleaned = response.data
         .replace(/^```json\s*/, '')
         .replace(/^```\s*/, '')
         .replace(/```$/, '');
 
-      console.log(cleaned);
+      // console.log(cleaned);
 
       // ✅ Parse the JSON string to actual JS objects
       const parsed = JSON.parse(cleaned);
@@ -60,6 +63,10 @@ Each question should be an object in a JSON array, with the following format:
 
 
   }
+
+
+
+
 
   return (
     <Sheet open={openTheme} onOpenChange={setOpenTheme}>

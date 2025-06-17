@@ -40,6 +40,10 @@ export default function Page() {
   });
 
   const onSubmit = async (data) => {
+
+    
+
+
     const blob = await pdf(<DppDocument questions={data.questions} />).toBlob();
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');

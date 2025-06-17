@@ -24,7 +24,7 @@ export default function Contact() {
     try{
       setLoading(true)
       const res = await axios.post('/api/sendMessage', data)
-      console.log(res)
+      // console.log(res)
       toast("you have successfully send us message ",{
         description:"thankyou we will reply you soon"
       })

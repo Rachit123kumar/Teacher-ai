@@ -1,6 +1,14 @@
 // app/_components/Ai/PdfDocument.jsx
 'use client'
 
+import { Font } from '@react-pdf/renderer';
+
+
+
+
+
+
+
 import React from 'react'
 import {
   Page,
@@ -10,6 +18,11 @@ import {
   StyleSheet
 } from '@react-pdf/renderer'
 
+
+Font.register({
+  family: 'NotoSansHindi',
+  src: '/fonts/NotoSansDevanagari-Regular.ttf',
+});
 // PDF Styles
 const styles = StyleSheet.create({
   page: {
@@ -68,6 +81,8 @@ const DppDocument = ({ questions }) => (
           </Text>
         ))}
       </View>
+
+      
     </Page>
   </Document>
 )

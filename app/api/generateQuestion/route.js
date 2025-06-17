@@ -17,7 +17,7 @@ export async function POST(req) {
             contents: [{ role: "user", parts: [{ text: request }] }],
         });
 
-        console.log(response.text);
+        // console.log(response.text);
 
         return NextResponse.json(response.text)
     } catch (err) {
